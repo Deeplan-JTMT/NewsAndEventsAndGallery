@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx/client-side-web-part-manifest.schema.json",
+  "id": "a3a33249-e8d3-48be-9e6b-1f0cbe573983",
+  "alias": "NewsEventsGalleryWebPart",
+  "componentType": "WebPart",
+  "version": "*",
+  "manifestVersion": 2,
+  "requiresCustomScript": false,
+  "supportedHosts": [
+    "SharePointWebPart",
+    "TeamsPersonalApp",
+    "TeamsTab",
+    "SharePointFullPage"
+  ],
+  "supportsThemeVariants": true,
+  "supportsFullBleed": true,
+  "preconfiguredEntries": [
+    {
+      "groupId": "5c03119e-3074-46fd-976b-c60198311f70",
+      "group": {
+        "default": "Advanced"
+      },
+      "title": {
+        "default": "NewsEventsGallery"
+      },
+      "description": {
+        "default": "NewsEventsGallery description"
+      },
+      "officeFabricIconFontName": "News",
+      "properties": {
+        "description": "NewsEventsGallery",
+        "TitleNews": "חדשות ואירועים",
+        "NewsListId": "1888a780-7c84-4117-b916-f36b46bdb31c",
+        "GalleryId": "1a4d6d70-4631-43ba-9be2-be8ee8f04cc9",
+        "TitleGallery": "גלריה",
+        "NewsToShow:": 10
+      }
+    }
+  ]
+}

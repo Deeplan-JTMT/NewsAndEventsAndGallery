@@ -1,0 +1,39 @@
+/* Enter From State */
+.slideLeft-enter {
+  transform: translateX(100%);
+}
+.slideLeft-enter.slideLeft-enter-active {
+  transform: translateX(0);
+  transition: transform 300ms ease-in-out;
+}
+
+/* Exit To State */
+.slideLeft-exit {
+  position: absolute;
+  top: 0;
+  transform: translateX(0);
+}
+.slideLeft-exit.slideLeft-exit-active {
+  transform: translateX(-100%);
+  transition: transform 300ms ease-in-out;
+}
+
+/* Enter From State */
+.slideRight-enter {
+  transform: translateX(-100%);
+}
+.slideRight-enter.slideRight-enter-active {
+  transform: translateX(0);
+  transition: transform 300ms ease-in-out;
+}
+
+/* Exit To State */
+.slideRight-exit {
+  position: absolute;
+  top: 0;
+  transform: translateX(0);
+}
+.slideRight-exit.slideRight-exit-active {
+  transform: translateX(100%);
+  transition: transform 300ms ease-in-out;
+}

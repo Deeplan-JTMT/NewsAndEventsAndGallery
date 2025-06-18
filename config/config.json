@@ -1,0 +1,19 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "news-events-gallery-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/newsEventsGallery/NewsEventsGalleryWebPart.js",
+          "manifest": "./src/webparts/newsEventsGallery/NewsEventsGalleryWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "NewsEventsGalleryWebPartStrings": "lib/webparts/newsEventsGallery/loc/{locale}.js",
+    "PropertyControlStrings": "node_modules/@pnp/spfx-property-controls/lib/loc/{locale}.js"
+  }
+}

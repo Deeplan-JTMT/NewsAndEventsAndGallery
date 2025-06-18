@@ -1,0 +1,199 @@
+.mainContainer {
+  width: min-content;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1%;
+}
+
+.GalleryCard {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  overflow: hidden;
+  // margin: 10px;
+  box-shadow: 2px 2px 5px 3px rgba(0, 0, 0, 0.12);
+  min-height: 0px;
+  // width: 90%;
+  position: relative;
+  width: 49rem;
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  .GalleryImageContainer {
+    //position: relative;
+    height: 322px; // Fixed height
+    flex: none; // Remove flex to maintain the fixed height
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation-name: fadeIn;
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; // Ensures the image covers the container fully
+      display: block;
+      animation: FadeIn 0.6s cubic-bezier(.22, .61, .36, 1) forwards;
+    }
+  }
+
+  .GalleryContent {
+    flex: 1;
+    padding: 6px 14px 0px 14px;
+    display: block; // Switched to block to allow natural flow of text and button
+    position: relative;
+    font-size: 0.9em;
+    min-height: 2.5rem;
+    max-height: 2.5rem;
+
+    p {
+      margin: 0 0 1rem 0; // Adjust bottom margin to make room for the read-more button
+      color: #333;
+      font-size: inherit;
+      line-height: 1.2em; // Ensure this is set so that you can calculate max-height properly
+      max-height: 3.6em; // This should be line-height * number of lines you want to show
+    }
+
+    .readMore {
+      color: #007da9;
+      text-decoration: underline;
+      cursor: pointer;
+      background: none;
+      margin-top: 1rem; // Give some space above the Read More link
+    }
+
+    .hide {
+      display: none;
+    }
+  }
+}
+
+// Styles for the arrow divs
+.arrowLeft,
+.arrowRight {
+  position: absolute;
+  top: 50%; // Center vertically
+  transform: translateY(-50%); // Offset by half its height for perfect centering
+  z-index: 10; // Ensure the arrows are above other content
+  cursor: pointer; // Change cursor to indicate clickability
+  color: #007da9; // Adjust the color as needed
+  padding: 10px; // Add some padding around the arrow
+  font-size: 48px; // Size of the arrow
+}
+
+.arrowLeft:hover> :nth-child(1),
+.arrowRight:hover> :nth-child(1) {
+  background-color: rgb(240, 240, 240);
+  opacity: 0.5;
+  border-radius: 50%;
+}
+
+// Specific styles for the left arrow
+.arrowLeft {
+  left: 10px; // Adjust the distance from the left edge of the container
+}
+
+// Specific styles for the right arrow
+.arrowRight {
+  right: 10px; // Adjust the distance from the right edge of the container
+}
+
+.GalleryTitle {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+
+@media (min-width: 1921px) {
+  .GalleryCard {
+    width: 100%;
+  }
+
+  .mainContainer {
+    width: 100%;
+
+    .GalleryImageContainer {
+      height: 400px;
+    }
+  }
+}
+
+@media (max-width: 1780px) {
+  .GalleryCard {
+    min-width: 42rem;
+    width: auto;
+    transition: 0.2s;
+  }
+}
+
+// @media (max-width: 1500px) {
+
+//     .GalleryCard {
+//         min-width: 35rem;
+//     }
+// }
+
+@media (max-width: 1500px) {
+  .GalleryCard {
+    min-width: 35rem;
+  }
+}
+
+@media (max-width: 1300px) {
+  .GalleryCard {
+    min-width: 32rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .GalleryCard {
+    min-width: 28rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .GalleryCard {
+    min-width: 37.6rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .GalleryCard {
+    min-width: 20.1rem;
+  }
+}
+
+.linkContainer {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.imageStyle {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.imageStyle:hover {
+  transform: scale(1.05); // Zoom effect
+}
+
+@keyframes FadeIn {
+  from {
+    opacity: 0;
+    transform: scale(.94);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

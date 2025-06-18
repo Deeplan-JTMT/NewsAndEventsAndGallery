@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "news-and-events-and-gallery-client-side-solution",
+    "id": "aa775009-87cf-452d-9479-df81c17209ba",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.18.2"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "news-and-events-and-gallery description"
+      },
+      "longDescription": {
+        "default": "news-and-events-and-gallery description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "news-and-events-and-gallery Feature",
+        "description": "The feature that activates elements of the news-and-events-and-gallery solution.",
+        "id": "e31b4ee7-4898-4fef-b24a-5e193ddcd869",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/news-and-events-and-gallery.sppkg"
+  }
+}
