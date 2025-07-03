@@ -3,7 +3,7 @@
   "solution": {
     "name": "news-and-events-and-gallery-client-side-solution",
     "id": "aa775009-87cf-452d-9479-df81c17209ba",
-    "version": "1.0.0.0",
+    "version": "1.0.0.1",
     "includeClientSideAssets": true,
     "skipFeatureDeployment": true,
     "isDomainIsolated": false,

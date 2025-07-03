@@ -1,4 +1,4 @@
-@import '~@fluentui/react/dist/sass/References.scss';
+@import "~@fluentui/react/dist/sass/References.scss";
 
 //---------------- for gulp serve Development
 :global #workbenchPageContent {
@@ -6,11 +6,11 @@
   left: 0;
   right: 0;
 
-  &>div {
-    &>div {
+  & > div {
+    & > div {
       overflow: visible;
 
-      &>div {
+      & > div {
         overflow: visible;
         padding: 0;
 
@@ -61,9 +61,9 @@
   display: flex;
   justify-content: center;
   justify-content: space-between;
-  width: 91%;
-  gap: 1%;
-  padding-bottom: 2%;
+  width: 96%;
+  gap: 1.5em;
+  padding-bottom: 1em;
   align-items: flex-end;
 }
 

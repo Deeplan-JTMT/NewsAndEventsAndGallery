@@ -7,7 +7,7 @@
   },
   "main": "lib/index.js",
   "scripts": {
-    "build": "node ./services/updateVersion.service.js && npm run clean && npm run bundle && npm run package-solution && npm run deploy",
+    "build": "node ./services/updateVersion.service.js && npm run clean && npm run bundle && npm run package-solution",
     "build-bash": "npm run compile && npm run runBuild",
     "compile": "chmod +x ./services/runBuild.bash",
     "runBuild": "bash ./services/runBuild.bash",
