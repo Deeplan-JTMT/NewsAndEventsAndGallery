@@ -44,11 +44,15 @@ export default class CardGallery extends React.Component<CardGalleryProps, CardG
 
   getGallery = async () => {
     const siteName = this.props.context.pageContext.web.title;
-    const items = await this.props.sp.web.getFolderByServerRelativePath(`/sites/${siteName}/Gallery`).files.expand("ListItemAllFields")()
-      .then(items => items.filter((item: any) => item.ListItemAllFields.isDisplay)
-        .sort((a: any, b: any) => a.ListItemAllFields.Index - b.ListItemAllFields.Index));
 
-
+    
+    const items = await this.props.sp.web.getFolderByServerRelativePath(`/sites/JTMT/Gallery`).files.expand("ListItemAllFields")()
+    
+    .then(items => items.filter((item: any) => item.ListItemAllFields.isDisplay)
+    .sort((a: any, b: any) => a.ListItemAllFields.Index - b.ListItemAllFields.Index));
+    console.log(items)
+    
+    
     this.setState({ Gallery: items })
   }
 
@@ -90,6 +94,8 @@ export default class CardGallery extends React.Component<CardGalleryProps, CardG
       <div className={styles.mainContainer}>
         <h3 className={styles.GalleryTitle}>{TitleGallery}</h3>
         <div className={styles.GalleryCard}>
+        {console.log(Gallery)
+        }
           {Gallery.length > 1 && <div className={styles.arrowLeft} onClick={this.handlePrevClick}>
             <NavigateBeforeIcon fontSize="large" />
           </div>}
