@@ -118,6 +118,9 @@
   display: flex;
   justify-content: center;
   margin: 0;
+      font-weight: 500;
+    font-family: Rubik, sans-serif !important;
+    font-size: 18px;
 }
 
 .ModalContainer {
@@ -176,6 +179,7 @@
 
   .newsCard .newsContent p {
     font-size: 12px;
+    font-weight: 500 !important;
   }
 }
 
